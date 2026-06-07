@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Загрузка данных с бэкенда (GET)
     async function loadReviews() {
         try {
-            const response = await fetch('http://127.0.0.1:5000/api/reviews');
+            const response = await fetch('http://d7.aurorix.net:25401/api/reviews');
             if (!response.ok) throw new Error();
             const data = await response.json();
             renderReviews(data);
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             try {
-                const response = await fetch('http://127.0.0.1:5000/api/reviews', {
+                const response = await fetch('http://d7.aurorix.net:25401/api/reviews', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
