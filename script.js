@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Загрузка данных с бэкенда (GET)
     async function loadReviews() {
         try {
-            const response = await fetch('http://d7.aurorix.net:25401/api/reviews');
+            const response = await fetch('https://two34-j28n.onrender.com/api/reviews');
             if (!response.ok) throw new Error();
             const data = await response.json();
             renderReviews(data);
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             try {
-                const response = await fetch('http://d7.aurorix.net:25401/api/reviews', {
+                const response = await fetch('https://two34-j28n.onrender.com/api/reviews', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
